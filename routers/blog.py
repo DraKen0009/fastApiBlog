@@ -3,10 +3,11 @@ from typing import List
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 
-from blog import schemas, models
-from blog.controller import blog
-from blog.database import get_db
-from blog.oauth2 import get_current_user
+import schemas
+import models
+from controller import blog
+from database import get_db
+from oauth2 import get_current_user
 
 router = APIRouter(
     tags=['Blogs'],
